@@ -1,0 +1,4 @@
+scgtour/local_settings.py
+Vagrantfile
+*.pyc
+.vagrant
