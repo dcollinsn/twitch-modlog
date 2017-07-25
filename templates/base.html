@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>SCGTour Mod Logs | {% block title %}{% endblock %}</title>
+
+  <style type="text/css">
+  #content {
+    float: left;
+    padding: 22px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  #content table tr.odd {
+    background-color: #eee;
+  }
+  #content table td.nowrap {
+    white-space: nowrap;
+  }
+  </style>
+
+</head>
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

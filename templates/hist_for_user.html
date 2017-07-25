@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{% url 'hist_for_user' %}" method="get">
+    <input type="text" name="username" value="{{ username }}">
+    <input type="submit" value="Submit">
+</form>
+
+<table>
+    {% for log in logs %}
+        <tr class="{% cycle 'odd' 'even' %}">
+            <td class="nowrap">
+                {{ log.time }}
+            </td>
+            <td class="nowrap">
+                &lt; {{ log.user }} &gt;
+            </td>
+            <td>
+                {{ log.text }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

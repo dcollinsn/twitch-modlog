@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Welcome?</h2>
+
+<p>I'm going to assume that you know what you're here for. Type in a twitch username in the field below, click submit, and you'll get some of their recent chat history.</p>
+
+<form action="{% url 'hist_for_user' %}" method="get">
+    <input type="text" name="username" value="{{ username }}">
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
+
