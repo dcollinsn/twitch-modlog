@@ -17,7 +17,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         file_name = options['file_name']
-        file = open(file_name, 'r')
+#        file = open(file_name, 'r')
+        file = codecs.open(file_name, 'r', 'utf-8')
 
         timezone.activate(pytz.timezone('America/New_York'))
 
