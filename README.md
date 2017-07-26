@@ -26,17 +26,6 @@ logs as your chat is used. I use a command similar to the following in my cronta
 find /logs/ -mtime -1 | grep -E 'scglive|scgtour' | xargs -n 1 -P 1 ./manage.py import_logs
 ```
 
-There may yet be a small bug here. I get errors like the following:
-
-```
-  if log.user == username and log.text == text:
-/scgtour/logs/management/commands/import_logs.py:58: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
-```
-
-Which could be caused by invalid utf-8 data in the logs, but which could be
-causing data to be imported multiple times. I haven't confirmed this yet, but
-you should be aware of it.
-
 ## Contributing
 
 If this is in some way useful to you, or it would be useful with minor changes,
